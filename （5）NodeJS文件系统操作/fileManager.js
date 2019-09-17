@@ -24,7 +24,7 @@ process.stdin.on("data", (data) => {
         data = data.substr(6, data.length-1);
 
         filePath = path.join(dirPath, data);
-        fs.writeFile(filePath, '', (err) => {
+        fs.writeFile(filePath, 'hello node', (err) => {
             if(err) {
                 console.log(err);
             } else {

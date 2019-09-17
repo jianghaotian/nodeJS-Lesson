@@ -28,7 +28,11 @@ http.createServer((req, res) => {
                     res.write(buf.toString());
                     res.end();
                 }
-                fs.closeSync(fd);
+                fs.close(fd, (err) => {
+                    if(err) {
+                        console.log(err)
+                    }
+                });
             });
         }
     });
