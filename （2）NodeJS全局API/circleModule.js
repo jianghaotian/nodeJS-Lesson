@@ -1,5 +1,5 @@
 // 5
-// function cicleFun(r) {
+// function circleFun(r) {
 //     function circumference() {
 //         return 2 * Math.PI * r;
 //     }
@@ -7,10 +7,10 @@
 //         return Math.PI * r * r;
 //     }
 
-//     return {circumference: circumference, area: area}
+//     return {circumference: circumference, area: area};
 // }
 // module.exports = {
-//     cicleFun: cicleFun
+//     circleFun: circleFun
 // }
 
 
