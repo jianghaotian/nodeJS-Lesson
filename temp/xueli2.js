@@ -10,9 +10,11 @@ if (process.argv[2] == 'list') {
             files.forEach((file, index) => {
                 var fileObj = {};
                 var childPath = path.join(__dirname, file);
-                fileObj.fileName = file;
-                fileObj.fileSize = fs.statSync(childPath).size;
-                fileList.push(fileObj);
+                if(fs.lstatSync(childPath).isFile()) {
+                    fileObj.fileName = file;
+                    fileObj.fileSize = fs.statSync(childPath).size;
+                    fileList.push(fileObj);
+                }
             });
             console.log(fileList);
         }
